@@ -14,6 +14,15 @@ import android.view.ViewGroup;
  * create an instance of this fragment.
  */
 public class ContactFragment extends Fragment {
+    private static ContactFragment instance;
+
+    public static ContactFragment newInstance() {
+        if (instance == null) {
+            instance = new ContactFragment();
+        }
+        return instance;
+    }
+
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
